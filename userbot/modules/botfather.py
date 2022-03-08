@@ -7,12 +7,13 @@ from telethon.tl.functions.contacts import UnblockRequest
 
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot import CMD_HANDLER as cmd
+from userbot.utils import ayiin_cmd
 
 chat = "@BotFather"
 
 
-@register(outgoing=True, pattern="^Botbaru(?: |$)(.*)")
+@ayiin_cmd(pattern="buatbot(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -20,7 +21,7 @@ async def _(event):
         text, username = event.pattern_match.group(1).split()
 
     else:
-        await event.edit("`Masukan Yang Benar Cok Biar Bisa Bikin Bot!!`")
+        await event.edit("**Yang Benerlah Kentod Biar Bisa Bikin Bot!!!**")
         return
 
     async with event.client.conversation(chat) as conv:
@@ -47,10 +48,10 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "buatbot": f"**Plugin : **`buatbot`\
-        \n\n  •  **Syntax :** `Botbaru`\
+        "botfather": f"**Plugin : **`botfather`\
+        \n\n  •  **Syntax :** `{cmd}buatbot`\
         \n  •  **Function : **Buat Bot Baru Di Bot Father\
-        \n\n**Untuk Membuat Bot Dari Bot Father, Ketik** `Botbaru < bot_name > < bot_username >`\
+        \n\n**Untuk Membuat Bot Dari Bot Father, Ketik** `{cmd}buatbot < bot_name > < bot_username >`\
     "
     }
 )
