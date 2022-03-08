@@ -18,7 +18,7 @@ from userbot import BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, HEROKU_API_KEY, HEROKU_APP_NAME, SUDO_USERS
 from userbot.modules.sql_helper.globals import addgvar, delgvar, gvarstatus
-from userbot.utils import edit_or_reply, ayiin_cmd
+from userbot.utils import edit_or_reply, edit_delete, ayiin_cmd
 from time import sleep
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -116,7 +116,7 @@ async def set_var(var):
                 "**#SET #VAR_HEROKU #ADDED**\n\n"
                 f"`{variable}` = `{value}`",
             )
-        await xx.edit("`Sedang Proses, Mohon Tunggu sebentar..`")
+        await edit_delete(var, "`Sedang Proses, Mohon Tunggu Di Group Logs Lu Kentod...`")
     else:
         if BOTLOG_CHATID:
             await var.client.send_message(
@@ -296,7 +296,7 @@ CMD_HELP.update(
         "heroku": f"**Plugin : **`heroku`\
         \n\n  •  **Syntax :** `{cmd}set var <nama var> <value>`\
         \n  •  **Function : **Tambahkan Variabel Baru Atau Memperbarui Variabel Setelah Menyetel Variabel Ayiin-Userbot Akan Di Restart.\
-        \n\n  •  **Syntax :** `{cmd}get var or .get var <nama var>`\
+        \n\n  •  **Syntax :** `{cmd}get var or {cmd}get var <nama var>`\
         \n  •  **Function : **Dapatkan Variabel Yang Ada,Harap Gunakan Di Grup Private Anda!\
         \n\n  •  **Syntax :** `{cmd}del var <nama var>`\
         \n  •  **Function : **Untuk Menghapus var heroku\

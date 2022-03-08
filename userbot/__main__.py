@@ -13,10 +13,13 @@
 
 import sys
 from importlib import import_module
+from platform import python_version
 
 import requests
+from pytgcalls import __version__ as pytgcalls
 from pytgcalls import idle
 from telethon.tl.functions.channels import InviteToChannelRequest
+from telethon import version
 
 
 from userbot import BOT_TOKEN, BOT_USERNAME, BOT_VER, BOTLOG_CHATID
@@ -50,25 +53,29 @@ except Exception as e:
 
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
+    
+LOGS.info(f"Python Version - {python_version()}")
+LOGS.info(f"Telethon Version - {version.__version__}")
+LOGS.info(f"PyTgCalls Version - {pytgcalls.__version__}")
 
 LOGS.info(
     f"STRING_SESSION detected!\n┌ First Name: {name}\n└ User ID: {uid}\n——"
 )
 
+LOGS.info(f"Ayiin-Userbot Version - {BOT_VER} [✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙳𝙸𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 ✧]")
+
 LOGS.info(
     f"Jika {name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/AyiinXdSupport"
 )
-
-LOGS.info(f"✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃️ ✧ ⚙️ V{BOT_VER} [✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙳𝙸𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 ✧]")
-
 
 async def ayiin_userbot_on():
     try:
         if BOTLOG_CHATID != 0:
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"**✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**\n**✧ 𝙱𝙴𝚁𝙷𝙰𝚂𝙸𝙻 𝙳𝙸 𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 ✧**\n━━\n➠ **𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 -** `{BOT_VER} @{branch}`\n➠ **𝙺𝙴𝚃𝙸𝙺** `{cmd}alive` **𝚄𝙽𝚃𝚄𝙺 𝙼𝙴𝙽𝙶𝙴𝙲𝙴𝙺 𝙱𝙾𝚃**\n━━",
+                f"**✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**\n**✧ 𝙱𝙴𝚁𝙷𝙰𝚂𝙸𝙻 𝙳𝙸 𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 ✧**\n━━\n➠ **𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 -** `{BOT_VER}`\n➠ `@{branch}`\n➠ **𝙺𝙴𝚃𝙸𝙺** `{cmd}alive` **𝚄𝙽𝚃𝚄𝙺 𝙼𝙴𝙽𝙶𝙴𝙲𝙴𝙺 𝙱𝙾𝚃**\n━━\n➠ **𝙼𝙰𝙽𝙰𝙶𝙴𝙳 𝙱𝚈** : {name}",
             )
+
     except Exception as e:
         LOGS.info(str(e))
     try:

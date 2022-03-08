@@ -7,7 +7,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 import asyncio
 
 
-@ayiin_cmd(pattern=r"^\tm(?: |$)(.*)")
+@ayiin_cmd(pattern=r"tm(?: |$)(.*)")
 async def _(event):
     chat = "@TempMailBot"
     yins = await edit_or_reply(event, "Sabar Tod Sedang Memprosess...")

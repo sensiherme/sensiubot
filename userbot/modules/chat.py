@@ -406,7 +406,7 @@ async def _(event):
     to_add_users = event.pattern_match.group(1)
     if event.is_private:
         await edit_or_reply(
-            event, "`.invite` pengguna ke grup chat, bukan ke Pesan Pribadi"
+            event, f"`{cmd}invite` pengguna ke grup chat, bukan ke Pesan Pribadi"
         )
     else:
         if not event.is_channel and event.is_group:
@@ -447,9 +447,9 @@ async def _(event):
 @ayiin_cmd(pattern="inviteall ?(.*)")
 async def get_users(event):
     ayiin_ = event.text[11:]
-    ayiin_.lower()
-    restricted = ["@AyiinXdSupport", "@AyiinXdSupport"]
-    if chat_man in restricted:
+    chat_ayiin = ayiin_.lower()
+    restricted = ["@AyiinXdSupport", "@ayiinxdsupport"]
+    if chat_ayiin in restricted:
         await edit_or_reply(event, "**Anda tidak dapat Mengundang Anggota dari sana.**")
         await event.client.send_message(
             -1001675396283, "**Maaf Telah Mencuri Member dari Sini.**"
@@ -591,7 +591,7 @@ CMD_HELP.update(
     {
         "link": f"**Plugin : **`link`\
         \n\n  •  **Syntax :** `{cmd}link` <username/userid> <opsional teks> (atau) Reply pesan `{cmd}link` <teks opsional>\
-        \n  •  **Function : **Membuat link permanen ke profil pengguna dengan teks ubahsuaian opsional.\
+        \n  •  **Function : **Membuat link permanen ke profil pengguna dengan teks ubah sesuaikan opsional.\
         \n  •  **Contoh : **`{cmd}link` @Ayiin Ganteng\
     "
     }
