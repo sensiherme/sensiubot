@@ -15,14 +15,14 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
-from userbot.events import register
+from userbot.utils import ayiin_cmd
 
 
-@register(pattern="info(?: |$)(.*)", outgoing=True)
+@ayiin_cmd(pattern="info(?: |$)(.*)")
 async def who(event):
 
     await event.edit(
-        "`Mengambil Informasi Pengguna Ini...`")
+        "`Sabar Tod Sedang Mengambil Informasi Pengguna Ini...`")
 
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
@@ -32,7 +32,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except AttributeError:
-        return event.edit("`Saya Tidak Mendapatkan Informasi Apapun.`")
+        return event.edit("`Maaf Komandan Saya Tidak Mendapatkan Informasi Apapun...`")
 
     message_id_to_reply = event.message.reply_to_msg_id
 
