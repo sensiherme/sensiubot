@@ -438,7 +438,7 @@ with bot:
         uid = user.id
         owner = user.first_name
         logo = ALIVE_LOGO
-        logoman = INLINE_PIC
+        logoyins = INLINE_PIC
         tgbotusername = BOT_USERNAME
         BTN_URL_REGEX = re.compile(
             r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)"
@@ -524,7 +524,7 @@ with bot:
                     "@AyiinXdSupport"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
-                    file=logoman,
+                    file=logoyins,
                     link_preview=False,
                     text=f"**✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙸𝙽𝙻𝙸𝙽𝙴 𝙼𝙴𝙽𝚄 ✧**\n\n✓ **𝙾𝚆𝙽𝙴𝚁 :** [{user.first_name}](tg://user?id={user.id})\n**𝙹𝚄𝙼𝙻𝙰𝙷 :** `{len(dugmeler)}` 𝙼𝙾𝙳𝚄𝙻𝙴𝚂",
                     buttons=buttons,
@@ -620,7 +620,7 @@ with bot:
                 text = f"**✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙸𝙽𝙻𝙸𝙽𝙴 𝙼𝙴𝙽𝚄 ✧**\n\n✧ **𝙾𝚆𝙽𝙴𝚁** [{user.first_name}](tg://user?id={user.id})\n✧ **𝙹𝚄𝙼𝙻𝙰𝙷** `{len(dugmeler)}` 𝙼𝙾𝙳𝚄𝙻𝙴𝚂"
                 await event.edit(
                     text,
-                    file=logoman,
+                    file=logoyins,
                     buttons=buttons,
                     link_preview=False,
                 )

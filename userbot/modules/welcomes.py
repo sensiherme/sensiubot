@@ -166,7 +166,7 @@ async def del_welcome(event):
 CMD_HELP.update(
     {
         "welcome": f"**Plugin : **`welcome`\
-        \n\n  •  **Syntax :** `{cmd}setwelcome` <pesan welcome> atau balas ke pesan ketik `.setwelcome`\
+        \n\n  •  **Syntax :** `{cmd}setwelcome` <pesan welcome> atau balas ke pesan ketik `{cmd}setwelcome`\
         \n  •  **Function : **Menyimpan pesan welcome digrup.\
         \n\n  •  **Syntax :** `{cmd}checkwelcome`\
         \n  •  **Function : **Check pesan welcome yang anda simpan.\
