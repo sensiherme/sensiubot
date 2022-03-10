@@ -110,8 +110,6 @@ async def _(event):
         yins = gen_font(text, _bold_italic)
     await edit_or_reply(event, yins)
     await event.reply("**𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚𝙙 𝘽𝙮 :** ✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧")
-    if not yins:
-         return await edit_or_reply(event, "Ngetiknya Yang Benerlah Anj")
 
 
 def gen_font(text, new_font):
@@ -132,14 +130,10 @@ async def font(event):
                       "**• monospace » 𝙰𝚈𝙸𝙸𝙽**\n"
                       "**• double stroke » 𝔸𝕐𝕀𝕀ℕ**\n"
                       "**• script royal » 𝒜𝒴ℐℐ𝒩**\n"
-                      "**• points » A ̤Y ̤I ̤I ̤N ̤**\n"
-                      "**• strike through » A̶Y̶I̶I̶N̶**\n"
                       "**• black bubbles » 🅐︎🅨︎🅘︎🅘︎🅝︎**\n"
                       "**• bubbles » Ⓐ︎Ⓨ︎Ⓘ︎Ⓘ︎Ⓝ︎**\n"
                       "**• bold » 𝗔𝗬𝗜𝗜𝗡**\n"
-                      "**• bold italic » 𝘼𝙔𝙄𝙄𝙉**\n"
-                      "**• black squares » 🅰︎🆈︎🅸︎🅸︎🅽︎**\n"
-                      "**• squares  » 🄰🅈🄸🄸🄽**\n\n"
+                      "**• bold italic » 𝘼𝙔𝙄𝙄𝙉**\n\n"
                       "**   ✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**")
 
 
