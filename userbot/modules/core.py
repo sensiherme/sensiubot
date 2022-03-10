@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 
 from userbot import CMD_HELP
+from userbot import CMD_HANDLER as cmd
 from userbot.utils import edit_or_reply, load_module, ayiin_cmd, remove_plugin, reply_id
 
 
@@ -74,12 +75,12 @@ async def uninstall(event):
 
 CMD_HELP.update(
     {
-        "core": "**Plugin : **`core`\
-        \n\n  •  **Syntax :** `.install` <reply ke file module>\
+        "core": f"**Plugin : **`core`\
+        \n\n  •  **Syntax :** `{cmd}install` <reply ke file module>\
         \n  •  **Function : **Untuk Menginstall module userbot secara instan.\
-        \n\n  •  **Syntax :** `.uninstall` <nama module>\
+        \n\n  •  **Syntax :** `{cmd}uninstall` <nama module>\
         \n  •  **Function : **Untuk Menguninstall / Menghapus module userbot secara instan.\
-        \n\n  •  **Syntax :** `.psend` <nama module>\
+        \n\n  •  **Syntax :** `{cmd}psend` <nama module>\
         \n  •  **Function : **Untuk Mengirim module userbot secara instan.\
     "
     }

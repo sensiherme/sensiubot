@@ -82,7 +82,7 @@ async def nekos_img(event):
     args = event.pattern_match.group(1)
     if not args or args not in arguments:
         return await edit_delete(
-            event, "ketik `.help nekos` untuk melihat argumen yang tersedia."
+            event, f"ketik `{cmd}help nekos` untuk melihat argumen yang tersedia."
         )
     xx = await edit_or_reply(event, "`Fetching from nekos...`")
     pic = nekos.img(args)
