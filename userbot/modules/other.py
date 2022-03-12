@@ -67,7 +67,7 @@ async def _(event):
         await event.client.delete_messages(conv.chat_id, [msg.id, response.id])
 
 
-@ayiin_cmd(pattern="unbanall$")
+@ayiin_cmd(pattern="allunban$")
 async def _(event):
     xx = await edit_or_reply(event, "`Searching Participant Lists...`")
     p = 0
