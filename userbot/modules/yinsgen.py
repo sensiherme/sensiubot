@@ -19,29 +19,23 @@ arguments = [
     "small caps",
     "monospace",
     "double stroke",
-    "script royal"
-    "points",
-    "strike through",
+    "script royal",
     "black bubbles",
     "bubbles",
     "bold",
-    "bold italic",
-    "black squares",
-    "squares"]
+    "bold italic"
+]
 
 fonts = [
     "small caps",
     "monospace",
     "double stroke",
     "script royal",
-    "points",
-    "strike through",
     "black bubbles",
     "bubbles",
     "bold",
-    "bold italic",
-    "black squares",
-    "squares"]
+    "bold italic"
+]
 
 _default = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 _small_caps = "ᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴᴏᴘϙʀsᴛᴜᴠᴡxʏᴢABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -70,12 +64,12 @@ async def fonts(text):
 
 
 @ayiin_cmd(pattern="font(.*)(|$)")
-async def _(event):
-    input = event.pattern_match.group(1).strip()
-    reply = await event.get_reply_message()
-    reply_to_id = event.message
-    if event.reply_to_msg_id:
-        reply_to_id = await event.get_reply_message()
+async def _(ayiin):
+    input = ayiin.pattern_match.group(1).strip()
+    reply = await ayiin.get_reply_message()
+    reply_to_id = ayiin.message
+    if ayiin.reply_to_msg_id:
+        reply_to_id = await ayiin.get_reply_message()
 
     if not reply:
         try:
@@ -83,15 +77,15 @@ async def _(event):
             font = _[0][:-1]
             text = _[0]
         except IndexError:
-            return await edit_delete(event, reply_to_id)
+            return await edit_delete(ayiin, reply_to_id)
     elif not input:
-        return await edit_delete(event, "`Give font dude :/`")
+        return await edit_delete(ayiin, "`Give font dude :/`")
 
     else:
         font = input
         text = reply.message
-    if not fonts:
-        return await edit_or_reply(event, f"`{font} not in font list`.", time=13)
+    if not font:
+        return await edit_or_reply(ayiin, f"`{font} not in font list`.", time=5)
     if font == "small caps":
         yins = gen_font(text, _small_caps)
     elif font == "monospace":
@@ -108,8 +102,10 @@ async def _(event):
         yins = gen_font(text, _bold)
     elif font == "bold italic":
         yins = gen_font(text, _bold_italic)
-    await edit_or_reply(event, yins)
-    await event.reply("**𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚𝙙 𝘽𝙮 :** ✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧")
+    await edit_or_reply(ayiin, yins)
+    await ayiin.reply("**𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚𝙙 𝘽𝙮 :** ✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧")
+    if not yins:
+        await edit_or_reply(ayiin, "Ketik Yang Bener Bego!!!")
 
 
 def gen_font(text, new_font):
@@ -124,17 +120,17 @@ def gen_font(text, new_font):
 @ayiin_cmd(pattern="fonts(.*)(|$)")
 async def font(event):
     ayiin = await edit_or_reply(event,
-                                "**𝘿𝙖𝙛𝙩𝙖𝙧 𝙁𝙤𝙣𝙩𝙨**\n"
-                                "**    ☟︎︎︎☟︎︎︎☟︎︎︎☟︎︎︎☟︎︎︎☟︎︎**")
-    await event.reply("**• small caps » ᴀʏɪɪɴ**\n"
-                      "**• monospace » 𝙰𝚈𝙸𝙸𝙽**\n"
-                      "**• double stroke » 𝔸𝕐𝕀𝕀ℕ**\n"
-                      "**• script royal » 𝒜𝒴ℐℐ𝒩**\n"
-                      "**• black bubbles » 🅐︎🅨︎🅘︎🅘︎🅝︎**\n"
-                      "**• bubbles » Ⓐ︎Ⓨ︎Ⓘ︎Ⓘ︎Ⓝ︎**\n"
-                      "**• bold » 𝗔𝗬𝗜𝗜𝗡**\n"
-                      "**• bold italic » 𝘼𝙔𝙄𝙄𝙉**\n\n"
-                      "**   ✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**")
+                                "**»» ᴅᴀғᴛᴀʀ ғᴏɴᴛs ««**\n"
+                                "**         ☟︎︎︎☟︎︎︎☟︎︎︎☟︎︎︎☟︎︎︎☟︎︎**\n\n"
+                                "**• small caps » ᴀʏɪɪɴ**\n"
+                                "**• monospace » 𝙰𝚈𝙸𝙸𝙽**\n"
+                                "**• double stroke » 𝔸𝕐𝕀𝕀ℕ**\n"
+                                "**• script royal » 𝒜𝒴ℐℐ𝒩**\n"
+                                "**• black bubbles » 🅐︎🅨︎🅘︎🅘︎🅝︎**\n"
+                                "**• bubbles » Ⓐ︎Ⓨ︎Ⓘ︎Ⓘ︎Ⓝ︎**\n"
+                                "**• bold » 𝗔𝗬𝗜𝗜𝗡**\n"
+                                "**• bold italic » 𝘼𝙔𝙄𝙄𝙉**\n\n"
+                                "**   ✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**")
 
 
 CMD_HELP.update(
