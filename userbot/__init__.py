@@ -686,7 +686,7 @@ with bot:
                         .replace("`", "")
                         .replace("**", "")[:150]
                         + "..."
-                        + "\n\nBaca Teks Berikutnya Ketik `+help`"
+                        + "\n\nBaca Teks Berikutnya Ketik +help "
                         + modul_name
                         + " "
                     )
