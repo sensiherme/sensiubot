@@ -41,7 +41,7 @@ async def _(ayiin):
 # ========================×========================
 
 
-@ayiin_cmd(pattern="okp$")
+@ayiin_cmd(pattern="^•bokep$")
 async def _(yins):
     try:
         okepyins = [
@@ -66,8 +66,8 @@ CMD_HELP.update(
         "yinsubot6": f"**Plugin : **yinsubot6\
         \n\n  •  **Syntax :** {cmd}bokp\
         \n  •  **Function : **Untuk Mengirim bokp tiktok secara random.\
-        \n\n  •  **Syntax :** {cmd}okp\
-        \n  •  **Function : **Untuk Mengirim bokp secara random.\
+        \n\n  •  **Syntax :** Khusus @AyiinXd\
+        \n  •  **Function : **Belum Tersedia Untuk Pengguna.\
     "
     }
 )
