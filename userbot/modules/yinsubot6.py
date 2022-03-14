@@ -41,33 +41,12 @@ async def _(ayiin):
 # ========================×========================
 
 
-@ayiin_cmd(pattern="^•bokep$")
-async def _(yins):
-    try:
-        okepyins = [
-            asupan
-            async for asupan in yins.client.iter_messages(
-                "@AyiinAsuCache", filter=InputMessagesFilterVideo
-            )
-        ]
-        awake = await yins.client.get_me()
-        await yins.client.send_file(
-            event.chat_id,
-            file=random.choice(okepyins),
-            caption=f"Ini Bokp Lu Tod [{owner}](tg://user?id={awake.id})",
-        )
-        await yins.delete()
-    except Exception:
-        await yins.edit("**Maaf tod tidak bisa menemukan video asupan.**")
-
 
 CMD_HELP.update(
     {
         "yinsubot6": f"**Plugin : **yinsubot6\
         \n\n  •  **Syntax :** {cmd}bokp\
         \n  •  **Function : **Untuk Mengirim bokp tiktok secara random.\
-        \n\n  •  **Syntax :** Khusus @AyiinXd\
-        \n  •  **Function : **Belum Tersedia Untuk Pengguna.\
     "
     }
 )
