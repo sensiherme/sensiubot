@@ -1,5 +1,6 @@
 # 🍀 © @tofik_dn
 # ⚠️ Do not remove credits
+# Rewrite @AyiinXd
 
 
 from userbot import CMD_HANDLER as cmd
@@ -11,29 +12,51 @@ from telethon.tl.types import InputMessagesFilterVideo
 
 
 @ayiin_cmd(pattern="bokp$")
-async def _(event):
+async def _(ayiin):
     try:
-        asupannya = [
+        asuyins = [
             asupan
-            async for asupan in event.client.iter_messages(
+            async for asupan in ayiin.client.iter_messages(
                 "@YinsAsuCache", filter=InputMessagesFilterVideo
             )
         ]
-        aing = await event.client.get_me()
-        await event.client.send_file(
-            event.chat_id,
-            file=random.choice(asupannya),
-            caption=f"Kena Tipu Ya Tod [{owner}](tg://user?id={aing.id})",
+        awake = await ayiin.client.get_me()
+        await ayiin.client.send_file(
+            ayiin.chat_id,
+            file=random.choice(asuyins),
+            caption=f"Kena Tipu Ya Tod [{owner}](tg://user?id={awake.id})",
         )
-        await event.delete()
+        await ayiin.delete()
     except Exception:
-        await event.edit("**Maaf tod tidak bisa menemukan video asupan.**")
+        await ayiin.edit("**Maaf tod tidak bisa menemukan video asupan.**")
+
+
+ayiin_cmd(pattern="okp$")
+async def _(yins):
+    try:
+        okepyins = [
+            asupan
+            async for asupan in yins.client.iter_messages(
+                "@okpyins", filter=InputMessagesFilterVideo
+            )
+        ]
+        awake = await yins.client.get_me()
+        await yins.client.send_file(
+            event.chat_id,
+            file=random.choice(okepyins),
+            caption=f"Ini Bokp Lu Tod [{owner}](tg://user?id={awake.id})",
+        )
+        await yins.delete()
+    except Exception:
+        await yins.edit("**Maaf tod tidak bisa menemukan video asupan.**")
 
 
 CMD_HELP.update(
     {
         "yinsubot6": f"**Plugin : **yinsubot6\
         \n\n  •  **Syntax :** {cmd}bokp\
+        \n  •  **Function : **Untuk Mengirim bokp tiktok secara random.\
+        \n\n  •  **Syntax :** {cmd}okp\
         \n  •  **Function : **Untuk Mengirim bokp secara random.\
     "
     }
