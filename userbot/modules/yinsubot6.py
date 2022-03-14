@@ -47,7 +47,7 @@ async def _(yins):
         okepyins = [
             asupan
             async for asupan in yins.client.iter_messages(
-                "@okpyins", filter=InputMessagesFilterVideo
+                "@AyiinAsuCache", filter=InputMessagesFilterVideo
             )
         ]
         awake = await yins.client.get_me()
