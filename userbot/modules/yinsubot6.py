@@ -3,6 +3,11 @@
 # Rewrite @AyiinXd
 
 
+# ========================×========================
+#            Jangan Hapus Credit Ngentod
+# ========================×========================
+
+
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
 from userbot.utils import ayiin_cmd
@@ -31,9 +36,12 @@ async def _(ayiin):
         await ayiin.edit("**Maaf tod tidak bisa menemukan video asupan.**")
 
 
-ayiin_cmd(pattern="okp$")
+# ========================×========================
+#            Jangan Hapus Credit Ngentod
+# ========================×========================
 
 
+@ayiin_cmd(pattern="okp$")
 async def _(yins):
     try:
         okepyins = [
