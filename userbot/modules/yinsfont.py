@@ -553,7 +553,7 @@ async def _(ayiin):
         font = input
         text = reply.message
     if not font:
-        return await edit_or_reply(ayiin, f"`{font} not in font list`.", time=5)
+        return await edit_delete(ayiin, f"`{font} not in font list`.", time=5)
     if font == "smallcap":
         yins = gen_font(text, _smallcap)
     elif font == "monospace":
@@ -573,7 +573,7 @@ async def _(ayiin):
     await edit_or_reply(ayiin, yins)
     await ayiin.reply("**𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚𝙙 𝘽𝙮 :** ✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧")
     if not yins:
-        await edit_or_reply(ayiin, "Ketik Yang Bener Bego!!!")
+        await ayiin.reply("Ketik Yang Bener Bego!!!")
 
 
 # ========================×========================
