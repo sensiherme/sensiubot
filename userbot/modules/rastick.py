@@ -2,7 +2,7 @@ import random
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import deEmojify, ayiin_cmd
+from userbot.utils import deEmojify, ayiin_cmd, edit_or_reply
 
 
 @ayiin_cmd(pattern="rst(?: |$)(.*)")
