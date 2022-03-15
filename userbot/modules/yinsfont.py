@@ -445,7 +445,7 @@ def blackbubbles(text):
 # ========================×========================
 
 
-@ayiin_cmd(pattern=r"font (monospace|smallcaps|outline|bold|bolditalic|script|bubbles|blackbubbles) (.*)")
+@ayiin_cmd(pattern=r"font (monospace|smallcap|outline|bold|bolditalic|script|bubbles|blackbubbles) (.*)")
 async def font_yins(ayiin):
     if ayiin.pattern_match.group(1) == "monospace":
         xd = monospace
@@ -467,7 +467,7 @@ async def font_yins(ayiin):
     await ayiin.edit(f"{kontol}")
     await ayiin.reply("**𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚𝙙 𝘽𝙮 :** ✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧")
     if not kontol:
-        await edit_or_reply(ayiin, "Ngetik Yang Bener Bego!!!")
+        await ayiin.reply("Ngetik Yang Bener Bego!!!")
 
 
 # ========================×========================
@@ -475,14 +475,14 @@ async def font_yins(ayiin):
 # ========================×========================
 
 arguments = [
-    "small caps",
+    "smallcap",
     "monospace",
-    "double stroke",
-    "script royal",
-    "black bubbles",
+    "outline",
+    "script",
+    "blackbubbles",
     "bubbles",
     "bold",
-    "bold italic"
+    "bolditalic"
 ]
 
 fonts = [
