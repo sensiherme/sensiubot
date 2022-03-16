@@ -24,6 +24,7 @@ from telethon.tl.types import (
     User,
 )
 
+from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, SUDO_USERS, bot
 from userbot.utils import edit_delete, edit_or_reply, ayiin_cmd
 
