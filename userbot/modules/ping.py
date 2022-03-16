@@ -72,19 +72,30 @@ async def get_readable_time(seconds: int) -> str:
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    xx = await edit_or_reply(ping, "**✧**")
-    await xx.edit("**✧✧**")
-    await xx.edit("**✧✧✧**")
-    await xx.edit("**✧✧✧✧**")
-    await xx.edit("**✧✧✧✧✧**")
+    ayiin = await edit_or_reply(ping, "**▱▱▱▱▱▱▱▱▱▱**")
+    await ayiin.edit("**▰▱▱▱▱▱▱▱▱▱**")
+    await ayiin.edit("**▰▰▱▱▱▱▱▱▱▱**")
+    await ayiin.edit("**▰▰▰▱▱▱▱▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▱▱▱▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▰▱▱▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▰▰▱▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▰▰▰▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▰▰▰▰▱▱**")
+    await ayiin.edit("**▰▰▰▱▱▱▱▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▱▱▱▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▰▱▱▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▰▰▱▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▰▰▰▱▱▱**")
+    await ayiin.edit("**▰▰▰▰▰▰▰▰▱▱**")
+    await ayiin.edit("**▰▰▰▰▰▰▰▰▰▱**")
+    await ayiin.edit("**▰▰▰▰▰▰▰▰▰▰**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
-    await xx.edit("⚡")
+    await ayiin.edit("⚡")
     sleep(3)
-    await xx.edit(
-        f"**✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**\n"
-        f"**𝙿𝙾𝙽𝙶!!!**\n"
+    await ayiin.edit(
+        f"**✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧**\n\n"
         f"✧ **𝙿𝙸𝙽𝙶𝙴𝚁 :** `%sms`\n"
         f"✧ **𝚄𝙿𝚃𝙸𝙼𝙴 :** `{uptime}` \n"
         f"✧ **𝙾𝚆𝙽𝙴𝚁 :** [{user.first_name}](tg://user?id={user.id})" % (duration)
