@@ -16,18 +16,15 @@ from telethon.tl.functions.photos import (
     GetUserPhotosRequest,
     UploadProfilePhotoRequest,
 )
-from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import (
     Channel,
     Chat,
     InputPhoto,
-    MessageEntityMentionName,
     MessageMediaPhoto,
     User,
 )
-from telethon.utils import get_input_location
 
-from userbot import CMD_HELP, SUDO_USERS, TEMP_DOWNLOAD_DIRECTORY, bot
+from userbot import CMD_HELP, SUDO_USERS, bot
 from userbot.utils import edit_delete, edit_or_reply, ayiin_cmd
 
 # ====================== CONSTANT ===============================
@@ -179,8 +176,6 @@ async def remove_profilepic(delpfp):
     ]
     await delpfp.client(DeletePhotosRequest(id=input_photos))
     await delpfp.edit(f"`Berhasil Menghapus {len(input_photos)} Foto Profil.`")
-
-
 
 
 CMD_HELP.update(
