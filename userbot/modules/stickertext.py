@@ -13,8 +13,7 @@ import textwrap
 from PIL import Image, ImageDraw, ImageFont
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot import resources
-from userbot.utils import ayiin_cmd, edit_or_reply
+from userbot.utils import ayiin_cmd
 
 
 @ayiin_cmd(pattern="stick(.*)")
