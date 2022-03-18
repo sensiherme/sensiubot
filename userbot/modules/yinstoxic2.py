@@ -2,7 +2,7 @@ from time import sleep
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.events import ayiin_cmd, edit_or_reply
+from userbot.utils import ayiin_cmd, edit_or_reply
 
 
 @ayiin_cmd(pattern=r"ngentot(?: |$)(.*)")
