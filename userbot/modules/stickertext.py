@@ -13,7 +13,7 @@ import textwrap
 from PIL import Image, ImageDraw, ImageFont
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import ayiin_cmd
+from userbot.utils import ayiin_cmd, edit_or_reply, edit_delete
 
 
 @ayiin_cmd(pattern="stick(.*)")
@@ -21,10 +21,8 @@ async def stext(event):
     sticktext = event.pattern_match.group(1)
 
     if not sticktext:
-        await edit_delete(event, "`Mohon Maaf, Saya Membutuhkan Text Anda.`")
-        return
-
-    await event.get_message()
+        return await edit_delete(event, "`Mohon Maaf, Saya Membutuhkan Text Anda.`")
+    await edit_or_reply(event, "**Sabar Ya Babi**")
 
     sticktext = textwrap.wrap(sticktext, width=10)
     sticktext = '\n'.join(sticktext)
