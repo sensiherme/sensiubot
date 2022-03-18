@@ -27,7 +27,7 @@ async def _(event):
     input_str = "".join(event.text.split(maxsplit=1)[1:])
     reply_message = await event.get_reply_message()
     if not event.reply_to_msg_id:
-        await edit_delete(event, f"```[ᴛᴏʟᴏʟ]({owner}) • Balas Ke Pesan Pengguna atau ketik {cmd}dgrup ID/Username Grup Yang Mau Lu Deteksi Bego```")
+        await edit_delete(event, f"```[ᴛᴏʟᴏʟ]• Balas Ke Pesan Pengguna atau ketik {cmd}dgrup ID/Username Grup Yang Mau Lu Deteksi Bego```")
         return
     if input_str:
         try:
@@ -36,7 +36,7 @@ async def _(event):
             try:
                 a = await event.client.get_entity(input_str)
             except ValueError:
-                await edit_delete(event, f"`[ᴛᴏʟᴏʟ]({owner})Mohon Berikan ID/Username untuk menemukan Riwayat`"
+                await edit_delete(event, f"`[ᴛᴏʟᴏʟ]• Mohon Berikan ID/Username untuk menemukan Riwayat`"
                                   )
             ayiinid = a.id
     else:
