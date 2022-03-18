@@ -45,17 +45,17 @@ async def koc(e):
 
 @ayiin_cmd(pattern="huh(?: |$)(.*)")
 async def _(event):
-    aa = await edit_or_reply(event"`\n(\\_/)`"
+    aa = await edit_or_reply(event, "`\n(\\_/)`"
                              "`\n(●_●)`"
-                             "`\n />❤️ *Ini Buat Kamu`")
+                             "`\n />❤️ **Ini Buat Kamu**`")
     sleep(3)
     await aa.edit("`\n(\\_/)`"
                   "`\n(●_●)`"
-                  "`\n/>💔  *Aku Ambil Lagi`")
+                  "`\n/>💔  **Aku Ambil Lagi**`")
     sleep(2)
     await aa.edit("`\n(\\_/)`"
                   "`\n(●_●)`"
-                  "`\n💔<\\  *Terimakasih`")
+                  "`\n💔<\\  **Terimakasih**`")
 
 
 @bot.on(events.NewMessage(pattern=r"\.$(.*)", outgoing=True))
