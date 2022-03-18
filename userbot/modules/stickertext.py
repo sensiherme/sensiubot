@@ -11,19 +11,21 @@ import textwrap
 
 
 from PIL import Image, ImageDraw, ImageFont
+from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot.resources import Roboto-Light.ttf
+from userbot.utils import ayiin_cmd, edit_or_reply
 
 
-@register(outgoing=True, pattern=r"^\.stick (.*)")
+@ayiin_cmd(pattern="stick(.*)")
 async def stext(event):
     sticktext = event.pattern_match.group(1)
 
     if not sticktext:
-        await event.edit("`Mohon Maaf, Saya Membutuhkan Text Anda.`")
+        await edit_delete(event, "`Mohon Maaf, Saya Membutuhkan Text Anda.`")
         return
 
-    await event.delete()
+    await event.get_message()
 
     sticktext = textwrap.wrap(sticktext, width=10)
     sticktext = '\n'.join(sticktext)
@@ -32,13 +34,13 @@ async def stext(event):
     draw = ImageDraw.Draw(image)
     fontsize = 220
     font = ImageFont.truetype(
-        "userbot/files/RobotoMono-Regular.ttf",
+        "userbot/resource/Roboto-Light.ttf",
         size=fontsize)
 
     while draw.multiline_textsize(sticktext, font=font) > (512, 512):
         fontsize -= 3
         font = ImageFont.truetype(
-            "userbot/files/RobotoMono-Regular.ttf",
+            "userbot/resource/Roboto-Light.ttf",
             size=fontsize)
 
     width, height = draw.multiline_textsize(sticktext, font=font)
@@ -57,8 +59,11 @@ async def stext(event):
     await event.client.send_file(event.chat_id, image_stream)
 
 
-CMD_HELP.update({
-    'stickertext':
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.stick` <text>"
-    "\nUsage: Mengubah Teks/Kata-Kata, Menjadi Stiker Anda."
-})
+CMD_HELP.update(
+    {
+        "stickerteks": f"**Plugin : **`stickerteks`\
+        \n\n  •  **Syntax :** `{cmd}stick` `<teks>`\
+        \n  •  **Function : **Membuat Sticker Text.\
+    "
+    }
+)

@@ -127,7 +127,7 @@ async def vc_play(event):
     ):
         return await edit_or_reply(event, "**Silahkan Masukan Judul Lagu**")
     elif replied and not replied.audio and not replied.voice or not replied:
-        botyins = await edit_or_reply(event, "`Searching...`")
+        botyins = await edit_or_reply(event, "`Sabar Kentod...`")
         query = event.text.split(maxsplit=1)[1]
         search = ytsearch(query)
         if search == 0:
@@ -231,7 +231,7 @@ async def vc_vplay(event):
     ):
         return await edit_or_reply(event, "**Silahkan Masukan Judul Video**")
     if replied and not replied.video and not replied.document:
-        xnxx = await edit_or_reply(event, "`Searching...`")
+        xnxx = await edit_or_reply(event, "`Sabar Kentod...`")
         query = event.text.split(maxsplit=1)[1]
         search = ytsearch(query)
         RESOLUSI = 720

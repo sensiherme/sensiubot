@@ -497,7 +497,7 @@ CMD_HELP.update(
         \n  •  **Function : **Mencari informasi karakter anime.\
         \n\n  •  **Syntax :** `{cmd}upcoming`\
         \n  •  **Function : **Mencari informasi Anime yang akan datang.\
-        \n\n  •  **Syntax :** `{cmd}scanime` **<nama anime>** atau `.sanime` **<nama anime>**\
+        \n\n  •  **Syntax :** `{cmd}scanime` **<nama anime>** atau `{cmd}sanime` **<nama anime>**\
         \n  •  **Function : **Mencari anime\
         \n\n  •  **Syntax :** `{cmd}smanga` **<manga>**\
         \n  •  **Function : **Untuk mencari akun terhapus dalam grup\

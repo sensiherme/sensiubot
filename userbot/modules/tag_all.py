@@ -123,7 +123,7 @@ CMD_HELP.update(
         \n  •  **Function : **Untuk Mengetag semua anggota Maksimal 3.000 orang yg akan ditag di grup untuk mengurangi flood wait telegram.\
         \n\n  •  **Syntax :** `{cmd}emojitag` <text>\
         \n  •  **Function : **Untuk Mengetag semua anggota di grup dengan random emoji berbeda.\
-        \n\n  •  **NOTE :** Untuk Memberhentikan Tag ketik `.restart`\
+        \n\n  •  **NOTE :** Untuk Memberhentikan Tag ketik `{cmd}restart`\
     "
     }
 )

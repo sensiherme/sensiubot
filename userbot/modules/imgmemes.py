@@ -261,7 +261,7 @@ async def kanna(event):
     await purge()
 
 
-@bot.on(ayiin_cmd(outgoing=True, pattern=r"\.tweet(?: |$)(.*)"))
+@bot.on(ayiin_cmd(outgoing=True, pattern=r"tweet(?: |$)(.*)"))
 async def tweet(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
@@ -382,7 +382,7 @@ async def nekobot(e):
         text1, text2 = input_str.split("|")
     else:
         await e.edit(
-            "Balas Ke Gambar Atau Sticker Lalu Ketik `.trap (Nama Orang Yang Di Trap)|(Nama Trap)`"
+            f"Balas Ke Gambar Atau Sticker Lalu Ketik `{cmd}trap (Nama Orang Yang Di Trap)|(Nama Trap)`"
         )
         return
     replied = await e.get_reply_message()

@@ -208,7 +208,7 @@ CMD_HELP.update(
         \n  •  **Function : **Untuk membuka kunci, beberapa jenis pesan dalam obrolan.\
         \n\n  •  **Jenis pesan yang bisa dikunci atau dibuka adalah:**\
         \n  •  `all, msg, media, sticker, gif, game, inline, poll, invite, pin, info`\
-        \n\n  •  **Contoh :** `.lock msg` atau `.unlock msg`\
+        \n\n  •  **Contoh :** `{cmd}lock msg` atau `{cmd}unlock msg`\
     "
     }
 )

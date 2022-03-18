@@ -13,9 +13,8 @@ from userbot.events import ayiin_cmd
 import asyncio
 
 
-@bot.on(ayiin_cmd(outgoing=True, pattern=r"hack(?: |$)(.*)"))
+@ayiin_cmd(pattern="hack(?: |$)(.*)")
 async def _(event):
-    range(0, 11)
     await event.edit("Installing.")
     await event.edit("Installing..")
     await event.edit("Installing...")

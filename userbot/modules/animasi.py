@@ -3,11 +3,11 @@
 
 
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, bot
-from userbot.events import ayiin_cmd
+from userbot import CMD_HELP
+from userbot.utils import ayiin_cmd
 
 
-@bot.on(ayiin_cmd(outgoing=True, pattern=r"skull(?: |$)(.*)"))
+@ayiin_cmd(pattern="skull(?: |$)(.*)")
 async def _(event):
     await event.edit("███████████████████████████\n"
                      "███████▀▀▀░░░░░░░▀▀▀███████\n"
@@ -30,9 +30,7 @@ async def _(event):
                      "███████████████████████████\n")
 
 
-bot.on(ayiin_cmd(outgoing=True, pattern=r"wlc(?: |$)(.*)"))
-
-
+@ayiin_cmd(pattern="wlc(?: |$)(.*)")
 async def _(event):
     await event.edit("█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"
                      "█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█\n"
@@ -41,7 +39,7 @@ async def _(event):
                      "█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n")
 
 
-@bot.on(ayiin_cmd(outgoing=True, pattern=r"klb(?: |$)(.*)"))
+@ayiin_cmd(pattern="klb(?: |$)(.*)")
 async def _(event):
     await event.edit("   ╚⊙ ⊙╝..\n"
                      "   ╚═(███)═╝\n"
@@ -66,9 +64,7 @@ async def _(event):
                      "      ╚═(█)═╝\n")
 
 
-bot.on(ayiin_cmd(outgoing=True, pattern=r"fucek(?: |$)(.*)"))
-
-
+@ayiin_cmd(pattern="fucek(?: |$)(.*)")
 async def _(event):
     await event.edit("░░░░░░░░░░░░░░░▄▄░░░░░░░░░░░\n"
                      "░░░░░░░░░░░░░░█░░█░░░░░░░░░░\n"

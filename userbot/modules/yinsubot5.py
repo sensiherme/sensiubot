@@ -1,7 +1,13 @@
-# © Copyright 2022 Ayiin-Userbot LLC Company.
-# GPL-3.0 License From Github
-# WARNING !!
-# Credits by @AyiinXd
+# Ayiin - Userbot
+# Copyright (C) 2022-2023 @AyiinXd
+#
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# PLease read the GNU Affero General Public License in
+# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+#
+# FROM Ayiin-Userbot <https://github.com/AyiinXd/Ayiin-Userbot>
+# t.me/AyiinXdSupport & t.me/AyiinSupport
+
 
 
 from time import sleep
@@ -11,6 +17,11 @@ from userbot import CMD_HELP
 from userbot.utils import edit_or_reply, ayiin_cmd
 
 
+# ========================×========================
+#            Jangan Hapus Credit Ngentod
+# ========================×========================
+
+
 @ayiin_cmd(pattern=r"ganteng(?: |$)(.*)")
 async def _(event):
     ayiin = await edit_or_reply(event, "`Lu Mau Tau Sebuah Fakta?`")
@@ -18,6 +29,11 @@ async def _(event):
     await ayiin.edit("`Fakta Yang Belum Terbongkar Selama Ini`")
     sleep(3)
     await ayiin.edit("`**GUA GANTENG FIX NO DEBAT😏**`")
+
+
+# ========================×========================
+#            Jangan Hapus Credit Ngentod
+# ========================×========================
 
 
 @ayiin_cmd(pattern=r"wibu(?: |$)(.*)")
@@ -60,7 +76,7 @@ async def _(event):
     await ayiin.edit("`Cuma Sendiri ni Senggol Dong`")
 
 
-@ayiin_cmd(pattern=r"p(?: |$)(.*)")
+@ayiin_cmd(pattern=r"^P(?: |$)(.*)")
 async def _(event):
     ayiin = await edit_or_reply(event, "`Awali perkataan dengan dengan salam`")
     sleep(1)
@@ -76,7 +92,7 @@ CMD_HELP.update(
         \n  •  **Function : **Lari tod ada wibu\
         \n\n  •  **Syntax :** `{cmd}senggol`\
         \n  •  **Function : **Senggol dong tod\
-        \n\n  •  **Syntax :** `{cmd}p`\
+        \n\n  •  **Syntax :** `P`\
         \n  •  **Function : **Bucin sopan\
         \n\n**Klo mau Req, kosa kata dari lu Bisa pake Module costum. Ketik** `{cmd}help costum`\
     "

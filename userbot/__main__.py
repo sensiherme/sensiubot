@@ -62,7 +62,7 @@ LOGS.info(
     f"STRING_SESSION detected!\n┌ First Name: {name}\n└ User ID: {uid}\n——"
 )
 
-LOGS.info(f"Ayiin-Userbot Version - {BOT_VER} [✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙳𝙸𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 ✧]")
+LOGS.info(f"✨ Ayiin-Userbot Version - {BOT_VER} [✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙳𝙸𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 ✧]")
 
 LOGS.info(
     f"Jika {name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/AyiinXdSupport"

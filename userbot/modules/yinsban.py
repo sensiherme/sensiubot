@@ -36,7 +36,7 @@ async def testing(ayiinxd):
 
 @ayiin_cmd(pattern="unbanall(?: |$)(.*)")
 async def _(ayiin):
-    await edit_or_reply(ayiin, "`Sabar Tod Sedang Mencari Daftar Blokir.`")
+    yins = await edit_or_reply(ayiin, "`Sabar Tod Sedang Mencari Daftar Blokir.`")
     p = 0
     (await ayiin.get_chat()).title
     async for i in ayiin.client.iter_participants(
@@ -49,7 +49,7 @@ async def _(ayiin):
             p += 1
         except BaseException:
             pass
-    await edit_or_reply(ayiin, f"`Sukses Membebaskan {p} Tahanan...`")
+    await yins.edit(f"`Sukses Membebaskan {p} Tahanan...`")
 
 
 CMD_HELP.update(

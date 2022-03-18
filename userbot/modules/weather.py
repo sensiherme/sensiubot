@@ -128,7 +128,7 @@ async def get_weather(weather):
 CMD_HELP.update(
     {
         "weather": f"**Plugin : **`weather`\
-        \n\n  •  **Syntax :** `{cmd}weather` <city> or `.weather` <city>, <country name/code>\
+        \n\n  •  **Syntax :** `{cmd}weather` <city> or `{cmd}weather` <city>, <country name/code>\
         \n  •  **Function : **Untuk Mendapat informasi cuaca kota.\
         \n\n  •  **Syntax : **`{cmd}weather anon` \
         \n  •  **Function : **Untuk Mendapat informasi cuaca kota, dan menghilangkan detail lokasi di hasil. (Ini membutuhkan var WEATHER_DEFCITY untuk disetel)\
