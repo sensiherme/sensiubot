@@ -4,7 +4,6 @@
 # WARNING !!
 # Credits by @TeamUltroid, Kraken, Sawan.
 
-import asyncio
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
@@ -13,7 +12,7 @@ from userbot.events import ayiin_cmd
 
 @bot.on(ayiin_cmd(outgoing=True, pattern=r"hack(?: |$)(.*)"))
 async def _(ayiin):
-    range (0, 11)
+    range(0, 11)
     await ayiin.edit("Installing.")
     await ayiin.edit("Installing..")
     await ayiin.edit("Installing...")
