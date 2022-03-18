@@ -29,7 +29,7 @@ async def stext(event):
 
     image = Image.new("RGBA", (512, 512), (255, 255, 255, 0))
     draw = ImageDraw.Draw(image)
-    fontsize = 220
+    fontsize = 200
     font = ImageFont.truetype(
         "userbot/utils/styles/ProductSans-BoldItalic.ttf",
         size=fontsize)
