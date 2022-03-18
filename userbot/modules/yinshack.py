@@ -11,7 +11,6 @@ from userbot import CMD_HELP
 from userbot.utils import ayiin_cmd
 
 
-
 @ayiin_cmd(pattern=r"hack(?: |$)(.*)")
 async def _(ayiin):
     await ayiin.edit("Installing.")
