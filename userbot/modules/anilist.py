@@ -10,8 +10,7 @@ import re
 
 import requests
 
-from userbot import CMD_HANDLER
-from userbot import CMD_HELP, bot
+from userbot import bot
 from userbot.utils import ayiin_cmd, time_formatter
 
 

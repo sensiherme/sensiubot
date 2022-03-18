@@ -46,16 +46,16 @@ async def koc(e):
 @ayiin_cmd(pattern="huh(?: |$)(.*)")
 async def _(event):
     aa = await edit_or_reply(event"`\n(\\_/)`"
-                     "`\n(●_●)`"
-                     "`\n />❤️ *Ini Buat Kamu`")
+                             "`\n(●_●)`"
+                             "`\n />❤️ *Ini Buat Kamu`")
     sleep(3)
     await aa.edit("`\n(\\_/)`"
-                     "`\n(●_●)`"
-                     "`\n/>💔  *Aku Ambil Lagi`")
+                  "`\n(●_●)`"
+                  "`\n/>💔  *Aku Ambil Lagi`")
     sleep(2)
     await aa.edit("`\n(\\_/)`"
-                     "`\n(●_●)`"
-                     "`\n💔<\\  *Terimakasih`")
+                  "`\n(●_●)`"
+                  "`\n💔<\\  *Terimakasih`")
 
 
 @bot.on(events.NewMessage(pattern=r"\.$(.*)", outgoing=True))
@@ -173,7 +173,7 @@ async def _(event):
             await event.edit(animation_chars[i % 6])
 
 CMD_HELP.update(
-  {
+    {
         "animasi2": f"**Plugin :** `animasi2`\
         \n\n • **Syntax :** `{cmd}nah`\
         \n • **Function :** Animasi Prank Memberikan Bunga.\
@@ -186,5 +186,5 @@ CMD_HELP.update(
         \n\n • **Syntax :** `{cmd}ceritacinta` | `{cmd}canda`\
         \n • **Function :** Cobain Sendiri Tod.\
   "
-  }
+    }
 )

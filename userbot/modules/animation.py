@@ -1038,7 +1038,6 @@ async def _(event):
     await typew.edit("`Target Berhasil Tersantet Online 🥴`")
 
 
-
 CMD_HELP.update(
     {
         "animasi": f"**Plugin :** `animasi`\

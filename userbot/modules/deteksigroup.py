@@ -59,6 +59,7 @@ def inline_mention(user):
     full_name = user_full_name(user) or "No Name"
     return f"[{full_name}](tg://user?id={user.id})"
 
+
 def user_full_name(user):
     names = [user.first_name, user.last_name]
     names = [i for i in list(names) if i]
