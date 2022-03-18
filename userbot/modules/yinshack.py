@@ -6,14 +6,13 @@
 
 from time import sleep
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, bot
-from userbot.events import ayiin_cmd
+from userbot import CMD_HELP
+from userbot.utils import ayiin_cmd, edit_or_reply
 
 
-@bot.on(ayiin_cmd(outgoing=True, pattern=r"hack(?: |$)(.*)"))
-async def _(ayiin):
-    range(0, 11)
-    await ayiin.edit("Installing.")
+@ayiin_cmd(pattern=r"hack(?: |$)(.*)")
+async def _(event):
+    ayiin = await edit_or_reply(event, "Installing.")
     await ayiin.edit("Installing..")
     await ayiin.edit("Installing...")
     await ayiin.edit("Installing....")
@@ -47,7 +46,7 @@ async def _(ayiin):
     await ayiin.edit("`root@anon:~# ls`")
     sleep(3)
     await ayiin.edit("`root@anon:~# ls\n\n  usr  ghost  codes  \n\nroot@aono:~#`")
-    await sleep(3)
+    sleep(3)
     await ayiin.edit("`root@anon:~# ls\n\n  usr  ghost  codes  \n\nroot@aono:~# # S`")
     await ayiin.edit("`root@anon:~# ls\n\n  usr  ghost  codes  \n\nroot@aono:~# # So`")
     await ayiin.edit("`root@anon:~# ls\n\n  usr  ghost  codes  \n\nroot@aono:~# # So L`")
