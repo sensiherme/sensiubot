@@ -32,22 +32,22 @@ async def _(cacad):
 
 
 @ayiin_cmd(pattern="hayo(?: |$)(.*)")
-async def _(hylo)
-ayiin = await edit_or_reply(hylo, "`**Nah Hayolo😂**`")
-sleep(1)
-await ayiin.edit("`**Kemana Botnya 😂**`")
-sleep(1)
-await ayiin.edit("`**Lagi Jalan-jalan Kah? 😂**`")
-sleep(1)
-await ayiin.edit("`**Jalan-jalan Kemana Tuh Botnya 😂**`")
-sleep(3)
-await ayiin.edit("`**Wahahaha Botnya Mati**` 🤣")
-sleep(2)
-await ayiin.edit("`**Haayolooooo **` 🤣")
-sleep(2)
-await ayiin.edit("**Botnya Mati Ya?**")
-sleep(2)
-await ayiin.edit("**Botnya Mati Ya? kasiaaaan** 😂")
+async def _(hylo):
+    ayiin = await edit_or_reply(hylo, "**Hayolo 😂**")
+    sleep(1)
+    await ayiin.edit("**Hayoloo 😂**")
+    sleep(1)
+    await ayiin.edit("**Hayolooo 😂**")
+    sleep(1)
+    await ayiin.edit("**Hayoloooo 😂**")
+    sleep(3)
+    await ayiin.edit("**Hayolooooo 🤣**")
+    sleep(2)
+    await ayiin.edit("**Haayolooooo 🤣**")
+    sleep(2)
+    await ayiin.edit("**Botnya Mati Ya?**")
+    sleep(2)
+    await ayiin.edit("**Botnya Mati Ya? kasiaaaan** 😂")
 
 
 # ========================×========================
