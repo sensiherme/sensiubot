@@ -551,7 +551,7 @@ async def _(ayiin):
         return await edit_delete(ayiin, "`Kasih Font Dong Bego :/`")
 
     else:
-        font = input.message
+        font = input
         text = reply.message
     if not font:
         return await edit_delete(ayiin, f"`{font} Tidak Ada Dalam Daftar Font Kentod...`", time=5)
