@@ -464,10 +464,11 @@ async def font_yins(ayiin):
     if ayiin.pattern_match.group(1) == "blackbubbles":
         xd = blackbubbles
     kontol = xd(ayiin.pattern_match.group(2))
+    if not kontol:
+        return await edit_delete(ayiin, "`Ngetik Yang Bener Bego...`")
+
     await ayiin.edit(f"{kontol}")
     await ayiin.reply("**𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚𝙙 𝘽𝙮 :** ✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ✧")
-    if not kontol:
-        await ayiin.reply("Ngetik Yang Bener Bego!!!")
 
 
 # ========================×========================
@@ -547,13 +548,13 @@ async def _(ayiin):
         except IndexError:
             return await edit_delete(ayiin, reply_to_id)
     elif not input:
-        return await edit_delete(ayiin, "`Give font dude :/`")
+        return await edit_delete(ayiin, "`Kasih Font Dong Bego :/`")
 
     else:
-        font = input
+        font = input.message
         text = reply.message
     if not font:
-        return await edit_delete(ayiin, f"`{font} not in font list`.", time=5)
+        return await edit_delete(ayiin, f"`{font} Tidak Ada Dalam Daftar Font Kentod...`", time=5)
     if font == "smallcap":
         yins = gen_font(text, _smallcap)
     elif font == "monospace":
@@ -581,7 +582,7 @@ async def _(ayiin):
 # ========================×========================
 
 
-@ayiin_cmd(pattern="fonts(.*)(|$)")
+@ayiin_cmd(pattern="lf(.*)(|$)")
 async def fonts(yins):
     ayiin = await edit_or_reply(yins,
                                 "**»» ᴅᴀғᴛᴀʀ ғᴏɴᴛs ««**\n"
@@ -602,7 +603,7 @@ CMD_HELP.update(
         "yinsfont": f"**Plugin : **`yinsfont`\
         \n\n  •  **Syntax :** `{cmd}font` `<nama font>` `<teks/balas ke pesan>`\
         \n  •  **Function : **Membuat Text dengan Fonts Style.\
-        \n\n  •  **Syntax :** `{cmd}fonts`\
+        \n\n  •  **Syntax :** `{cmd}lf`\
         \n  •  **Function : **Untuk Melihat Daftar Font.\
     "
     }
