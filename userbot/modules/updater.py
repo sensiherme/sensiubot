@@ -18,7 +18,7 @@ from userbot.utils import edit_delete, edit_or_reply, ayiin_cmd
 async def gen_chlog(repo, diff):
     d_form = "%d - %m - %y"
     return "".join(
-        f"➣ #{c.count()}: {c.summary} ʙʏ » {c.author} \n  ➥Commited on: {c.committed_datetime.strftime(d_form)}\n"
+        f"➣ #{c.count()}: {c.summary} ʙʏ » {c.author} \n    ➥Commited on: {c.committed_datetime.strftime(d_form)}\n"
         for c in repo.iter_commits(diff)
     )
 
