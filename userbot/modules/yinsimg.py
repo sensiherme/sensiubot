@@ -64,7 +64,7 @@ async def sketch(e):
     pencil_sketch_IMG = cv2.divide(
         gray_image, inverted_blurred_img, scale=256.0)
     cv2.imwrite("ayiinxd.png", pencil_sketch_IMG)
-    await xx.edit("⍟ 𝙎𝙠𝙚𝙩𝙘𝙝 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚 𝙗𝙮 𝘼𝙮𝙞𝙞𝙣-𝙐𝙨𝙚𝙧𝙗𝙤𝙩 ⍟", file="ayiinxd.png")
+    await e.edit("⍟ 𝙎𝙠𝙚𝙩𝙘𝙝 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚 𝙗𝙮 𝘼𝙮𝙞𝙞𝙣-𝙐𝙨𝙚𝙧𝙗𝙤𝙩 ⍟", file="ayiinxd.png")
     await xx.delete()
     os.remove(file)
     os.remove("ayiinxd.png")
