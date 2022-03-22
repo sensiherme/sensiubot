@@ -18,7 +18,7 @@ from userbot.ayiinxd import asupan_sagapung, exolink
 from userbot.utils import ayiin_cmd, edit_or_reply
 
 
-exorcist = "https://telegra.ph/file/acf11e451861a7933c2d9.jpg"
+exorcist = "https://telegra.ph/file/0a3324538d3ebbe1e4ba0.jpg"
 asupung = "https://telegra.ph/file/82598bc741e3010339d4c.jpg"
 
 
@@ -39,7 +39,7 @@ async def _(yins):
     link_2 = random.choice(exolink)
     thumb = exorcist
     output = (
-        f"**Request by:** @{user.username}\n"
+        f"**Request by:** @{user.username}\n\n"
         f"**{ayiin}**\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
         f"**               𝙴𝚇𝙾𝚁𝙲𝙸𝚂𝚃**\n"
@@ -48,7 +48,7 @@ async def _(yins):
         f"**⌲ {link_2} {link}**\n\n"
         f"**       𝙆𝙊𝙉𝙏𝙀𝙉 𝙋𝙍𝙀𝙈𝙄𝙐𝙈**\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
-        f"**          @PussyTubeCh**\n"
+        f"**          @premiumexor**\n"
         f"**╰✠━━━━━━❖━━━━━━✠╯**\n"
         f"**    𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙎𝙃𝘼𝙍𝙀 💦**\n\n"
         f"**❖ᴠᴠɪᴩ ᴠɪᴅɪᴏ ʙᴏᴋᴇᴩ ᴛᴀɴᴩᴀ ʟɪɴᴋ❖**\n\n"
@@ -73,7 +73,7 @@ async def _(yins):
 @ayiin_cmd(pattern="as(?: |$)(.*)")
 async def _(asupng):
     await bot.get_me()
-    await edit_or_reply(asupng, "`Asupan Sagapung Nih Boss...`")
+    await edit_or_reply(asupng, "`Asupan Sagapung Nih Tod, Si Ch Mati...`")
     sleep(2)
     text = str(asupng.pattern_match.group(1).split(" ", 1)[0])
     link = str(asupng.pattern_match.group(1).split(" ", 2)[0])
@@ -127,7 +127,7 @@ async def yinscollab(exor):
     ayiin = text.replace(".", " ")
     thumbnail = exorcist
     output = (
-        f"**{ayiin}**\n"
+        f"**{ayiin}**\n\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
         f"**               𝙴𝚇𝙾𝚁𝙲𝙸𝚂𝚃**\n"
         f"**╰✠━━━━━━❖━━━━━━✠╯**\n\n"
@@ -135,7 +135,7 @@ async def yinscollab(exor):
         f"**⌲ {link}**\n\n"
         f"**       𝙆𝙊𝙉𝙏𝙀𝙉 𝙋𝙍𝙀𝙈𝙄𝙐𝙈**\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
-        f"**          @PussyTubeCh**\n"
+        f"**          @premiumexor**\n"
         f"**╰✠━━━━━━❖━━━━━━✠╯**\n"
         f"**    𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙎𝙃𝘼𝙍𝙀 💦**\n\n"
         f"**❖ᴠᴠɪᴩ ᴠɪᴅɪᴏ ʙᴏᴋᴇᴩ ᴛᴀɴᴩᴀ ʟɪɴᴋ❖**\n\n"
