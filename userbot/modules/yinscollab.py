@@ -178,7 +178,7 @@ CMD_HELP.update(
     {
         "yinsexo": f"**Plugin : **`yinsexo`\
         \n\n  •  **Perintah:** `Ini Khusus Admin Exorcist Tod Bukan Publik.`\
-        \n  •  **Silahkan Ketik** `{cmd}yinscollab` **Untuk Mendapatkan Konten.**\
+        \n  •  **Silahkan Ketik** `{cmd}help yinscollab` **Untuk Mendapatkan Konten.**\
     "
     }
 )
