@@ -10,6 +10,7 @@
 
 
 import random
+from time import sleep
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, bot
@@ -30,6 +31,7 @@ asupung = "https://telegra.ph/file/82598bc741e3010339d4c.jpg"
 async def _(yins):
     await bot.get_me()
     await edit_or_reply(yins, "`Exorcist Nih Boss...`")
+    sleep(2)
     text = str(yins.pattern_match.group(1).split(" ", 1)[0])
     link = str(yins.pattern_match.group(1).split(" ", 2)[0])
     ayiin = text.replace(".", " ")
@@ -40,13 +42,13 @@ async def _(yins):
         f"**Request by:** @{user.username}\n"
         f"**{ayiin}**\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
-        f"**                𝙴𝚇𝙾𝚁𝙲𝙸𝚂𝚃**\n"
+        f"**               𝙴𝚇𝙾𝚁𝙲𝙸𝚂𝚃**\n"
         f"**╰✠━━━━━━❖━━━━━━✠╯**\n\n"
         f"**⌲ 𝙻𝙸𝙽𝙺**\n"
         f"**⌲ {link_2} {link}**\n\n"
         f"**       𝙆𝙊𝙉𝙏𝙀𝙉 𝙋𝙍𝙀𝙈𝙄𝙐𝙈**\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
-        f"**           @PussyTubeCh**\n"
+        f"**          @PussyTubeCh**\n"
         f"**╰✠━━━━━━❖━━━━━━✠╯**\n"
         f"**    𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙎𝙃𝘼𝙍𝙀 💦**\n\n"
         f"**❖ᴠᴠɪᴩ ᴠɪᴅɪᴏ ʙᴏᴋᴇᴩ ᴛᴀɴᴩᴀ ʟɪɴᴋ❖**\n\n"
@@ -72,6 +74,7 @@ async def _(yins):
 async def _(asupng):
     await bot.get_me()
     await edit_or_reply(asupng, "`Asupan Sagapung Nih Boss...`")
+    sleep(2)
     text = str(asupng.pattern_match.group(1).split(" ", 1)[0])
     link = str(asupng.pattern_match.group(1).split(" ", 2)[0])
     ayiin = text.replace(".", " ")
@@ -82,13 +85,13 @@ async def _(asupng):
         f"**Request by:** @{user.username}\n\n"
         f"**{ayiin}**\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
-        f"**         Asᴜᴘᴀɴ Sᴀɢᴀᴘᴜɴɢ**\n"
+        f"**       Asᴜᴘᴀɴ Sᴀɢᴀᴘᴜɴɢ**\n"
         f"**╰✠━━━━━━❖━━━━━━✠╯**\n\n"
         f"**⌲ 𝙻𝙸𝙽𝙺**\n"
         f"**⌲ {link_2} {link}**\n\n"
         f"**       𝙆𝙊𝙉𝙏𝙀𝙉 𝙋𝙍𝙀𝙈𝙄𝙐𝙈**\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
-        f"**           @PussyTubeCh**\n"
+        f"**          @PussyTubeCh**\n"
         f"**╰✠━━━━━━❖━━━━━━✠╯**\n"
         f"**    𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙎𝙃𝘼𝙍𝙀 💦**\n\n"
         f"**❖𝚂𝚄𝙿𝙿𝙾𝚁𝚃❖**\n"
@@ -118,6 +121,7 @@ async def _(asupng):
 async def yinscollab(exor):
     await bot.get_me()
     await edit_or_reply(exor, "`Exorcist Nih Boss...`")
+    sleep(2)
     if exor.pattern_match.group(1):
         text, link = exor.pattern_match.group(1).split()
     ayiin = text.replace(".", " ")
@@ -125,13 +129,13 @@ async def yinscollab(exor):
     output = (
         f"**{ayiin}**\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
-        f"**                𝙴𝚇𝙾𝚁𝙲𝙸𝚂𝚃**\n"
+        f"**               𝙴𝚇𝙾𝚁𝙲𝙸𝚂𝚃**\n"
         f"**╰✠━━━━━━❖━━━━━━✠╯**\n\n"
         f"**⌲ 𝙻𝙸𝙽𝙺**\n"
         f"**⌲ {link}**\n\n"
         f"**       𝙆𝙊𝙉𝙏𝙀𝙉 𝙋𝙍𝙀𝙈𝙄𝙐𝙈**\n"
         f"**╭✠━━━━━━❖━━━━━━✠╮**\n"
-        f"**           @PussyTubeCh**\n"
+        f"**          @PussyTubeCh**\n"
         f"**╰✠━━━━━━❖━━━━━━✠╯**\n"
         f"**    𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙎𝙃𝘼𝙍𝙀 💦**\n\n"
         f"**❖ᴠᴠɪᴩ ᴠɪᴅɪᴏ ʙᴏᴋᴇᴩ ᴛᴀɴᴩᴀ ʟɪɴᴋ❖**\n\n"
