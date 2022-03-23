@@ -9,8 +9,12 @@ import sys
 from pathlib import Path
 from random import randint
 
+
 import heroku3
 from telethon.tl.functions.contacts import UnblockRequest
+from telethon.errors import ChannelsTooMuchError
+from telethon.tl.functions.channels import CreateChannelRequest
+from telethon.tl.types import ChatAdminRights
 
 from userbot import (
     BOT_TOKEN,
@@ -164,6 +168,53 @@ async def autobot():
             "Silakan Hapus Beberapa Bot Telegram Anda di @Botfather atau Set Var BOT_TOKEN dengan token bot"
         )
         sys.exit(1)
+
+
+async def autopilot():
+    if BOTLOG_CHATID and str(BOTLOG_CHATID).startswith("-100"):
+        return
+    y = []  # To Refresh private ids
+    async for x in bot.iter_dialogs():
+        y.append(x.id)
+    if BOTLOG_CHATID:
+        try:
+            await bot.get_entity(int("BOTLOG_CHATID"))
+            return
+        except BaseException:
+            del heroku_var["BOTLOG_CHATID"]
+    try:
+        r = await bot(
+            CreateChannelRequest(
+                title="⍟ Aʏɪɪɴ Lᴏɢs ⍟",
+                about="» Group log Created by: Ayiin-Userbot\n\n» Support : @AyiinXdSupport\n» Support: @AyiinSupport",
+                megagroup=True,
+            ),
+        )
+    except ChannelsTooMuchError:
+        LOGS.info(
+            "Channel dan Group Lu Banyak Tod, Hapus Salah Satu Dan Restart Lagi"
+        )
+        exit(1)
+    except BaseException:
+        LOGS.info(
+            "Terjadi kesalahan, Buat sebuah grup lalu isi id nya di config var BOTLOG_CHATID."
+        )
+        exit(1)
+    chat_id = r.chats[0].id
+    if not str(chat_id).startswith("-100"):
+        heroku_var["BOTLOG_CHATID"] = "-100" + str(chat_id)
+    else:
+        heroku_var["BOTLOG_CHATID"] = str(chat_id)
+    rights = ChatAdminRights(
+        add_admins=True,
+        invite_users=True,
+        change_info=True,
+        ban_users=True,
+        delete_messages=True,
+        pin_messages=True,
+        anonymous=False,
+        manage_call=True,
+    )
 
 
 def load_module(shortname):

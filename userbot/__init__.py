@@ -137,7 +137,7 @@ API_HASH = str(os.environ.get("API_HASH") or None)
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
 # Logging channel/group ID configuration.
-BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID") or 0)
+BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", "0"))
 
 # Load or No Load modules
 LOAD = os.environ.get("LOAD", "").split()
@@ -327,14 +327,6 @@ try:
 except Exception as e:
     print(f"STRING_SESSION - {e}")
     sys.exit()
-
-
-async def check_botlog_chatid() -> None:
-    if not BOTLOG_CHATID:
-        LOGS.warning(
-            "var BOTLOG_CHATID kamu belum di isi. Buatlah grup telegram dan masukan bot @YinzRobot lalu ketik /id Masukan id grup nya di var BOTLOG_CHATID"
-        )
-        sys.exit(1)
 
 
 async def update_restart_msg(chat_id, msg_id):
@@ -712,8 +704,3 @@ with bot:
             "Help Mode Inline Bot Mu Tidak aktif. Tidak di aktifkan juga tidak apa-apa. "
             "Untuk Mengaktifkannya Buat bot di @BotFather Lalu Tambahkan var BOT_TOKEN dan BOT_USERNAME. "
             "Pergi Ke @BotFather lalu settings bot » Pilih mode inline » Turn On. ")
-    try:
-        bot.loop.run_until_complete(check_botlog_chatid())
-    except BaseException as e:
-        LOGS.exception(f"[BOTLOG] - {e}")
-        sys.exit(1)

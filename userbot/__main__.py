@@ -8,6 +8,8 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 #
+# autopilot by @kenkan
+#
 """ Userbot start point """
 
 
@@ -18,7 +20,11 @@ from platform import python_version
 import requests
 from pytgcalls import __version__ as pytgcalls
 from pytgcalls import idle
-from telethon.tl.functions.channels import InviteToChannelRequest
+from telethon.tl.functions.channels import (
+    EditAdminRequest,
+    EditPhotoRequest,
+)
+from telethon.tl.types import ChatAdminRights
 from telethon import version
 
 
@@ -26,7 +32,7 @@ from userbot import BOT_TOKEN, BOT_USERNAME, BOT_VER, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import DEVS, LOGS, blacklistayiin, bot, branch, call_py
 from userbot.modules import ALL_MODULES
-from userbot.utils import autobot, checking
+from userbot.utils import autobot, autopilot, checking
 
 try:
     bot.start()
@@ -63,12 +69,18 @@ LOGS.info(
 )
 
 LOGS.info(
-    f"✨ Ayiin-Userbot Version - {BOT_VER} [✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙳𝙸𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 ✧]")
-
-LOGS.info(
     f"Jika {name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/AyiinXdSupport"
 )
 
+LOGS.info(
+    f"✨ Ayiin-Userbot Version - {BOT_VER} [✧ 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙳𝙸𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 ✧]")
+
+
+if not BOTLOG_CHATID:
+    LOGS.info(
+        "BOTLOG_CHATID Vars tidak terisi, Memulai Membuat Grup Otomatis..."
+    )
+    bot.loop.run_until_complete(autopilot())
 
 async def ayiin_userbot_on():
     try:
@@ -85,7 +97,19 @@ async def ayiin_userbot_on():
     except BaseException:
         pass
     try:
-        await bot(InviteToChannelRequest(int(BOTLOG_CHATID), [BOT_USERNAME]))
+        rights = ChatAdminRights(
+            add_admins=False,
+            invite_users=True,
+            change_info=True,
+            ban_users=True,
+            delete_messages=True,
+            pin_messages=True,
+            anonymous=False,
+            manage_call=True,
+        )
+        await bot(EditAdminRequest(int(BOTLOG_CHATID), BOT_USERNAME, rights, "Assistant"))
+        logo = "userbot/resources/logo.jpg"
+        await bot(EditPhotoRequest(BOTLOG_CHATID, await bot.upload_file(logo)))
     except BaseException:
         pass
 
